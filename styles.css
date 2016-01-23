@@ -18,4 +18,36 @@ body {
 .tab {
   width: 100%;
   position: relative;
+  margin-bottom: 10px;
+}
+
+.tab input {
+  display: none;
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.25s ease-in;
+}
+
+.tab label {
+  display: block;
+  background-color: #72d2c6;
+  color: #fff;
+  padding: 1em 1em;
+  font-weight: bold;
+  transition: letter-spacing 0.55s;
+}
+
+.tab label:hover {
+  background-color: #85d8ce;
+  letter-spacing: 1px;
+}
+
+input:checked ~ .tab-content {
+  overflow: visible;
+  max-height: 125px;
+  opacity: 1;
 }
